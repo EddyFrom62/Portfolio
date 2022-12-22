@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/af24f80f2a.js" crossorigin="anonymous"></script>   
+</head>
+<body>
+
+<a href="index.html" class="tilbage">Back to main page</a>
+
+    <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            
+        </nav>
+        <div class="header-text">
+
+            <h1>My <span>Portfolio</span></h1>
+        </div>
+    </div>
+</div>    
+<!-- --------------------------about--------------------     -->
+
+<!-- --------------------services------------- -->
+
+
+<!-- --------------portfolio------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Selvportræt</h3>
+                    <p>Selvportræt kreeret i Adobe Illustrator med henblik på at dygtigere mig selv i programmet</p>
+                </div>
+            </div><div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Plakat</h3>
+                    <p>Plakat udarbejdet i Photoshop, med henblik på at printe ud og understøtte en udstilling</p>
+                </div>
+            </div><div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Optimering af hjemmeside</h3>
+                    <p>Forbedring af hjemmesides visuelle udtryk og brugervenlighed</p>
+                </div>
+            </div>
+        </div><div class="work-list">
+            <div class="work">
+                <img src="images/work-4.gif">
+                <div class="layer">
+                    <h3>Animation af portræt</h3>
+                    <p>Et gammelt portrætbillede livliggjort ved hjælp af Animation</p>
+                </div>
+            </div><div class="work">
+                <img src="images/work-5.png">
+                <div class="layer">
+                    <h3>Karakter kreation</h3>
+                    <p>Karakter til animationsprojekt, udarbejdet i Adobe Illustrator</p>
+                    
+                </div>
+            </div><div class="work">
+                <img src="images/work-6.png">
+                <div class="layer">
+                    <h3>3D animation</h3>
+                    <p>3D animation af hoppende boks, lavet i Blender</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------contact information---------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> edvinz@live.dk</p>
+                <p><i class="fa-solid fa-phone-volume"></i> +45 60533507</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/edvin.zuko"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Zuko </p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");   
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+</script>
+
+<script>
+
+
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbws4nsXvq2w5k4cIFbwZUyHZphH5C42Jc9SB5VM39-6Ejv80TEzFSUvW6zlt5Na1koJcw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Your message has been sent succesfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
