@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/af24f80f2a.js" crossorigin="anonymous"></script>   
+</head>
+<body>
+    <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Edvin</span><br>I Love Graphic Design</h1>
+        </div>
+    </div>
+</div>    
+<!-- --------------------------about--------------------     -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hej! Jeg hedder Edvin Zuko og er i gang med at læse til multimediedesigner. 
+                    Jeg har altid været interesseret i at skabe visuelt tiltalende produkter
+                    og har derfor valgt at følge mit hjerte og starte begynde at læse til multiemediedesigner. 
+                    Gennem min uddannelse har jeg indtil videre lært at arbejde med mange forskellige designværktøjer 
+                    og -teknikker, og jeg har også fået indsigt i de teoretiske baggrunde for designprocessen. 
+                    Jeg har desuden arbejdet på projekter for forskellige klienter, hvilket har givet mig 
+                    erfaring med at omsætte klienters ønsker og ideer til færdige produkter.<br><br>Jeg stræber efter at skabe designs, der er både visuelt tiltalende og funktionsdygtige, 
+                    og jeg er altid klar til at lære nye ting og udfordre mig selv for at blive en endnu 
+                    bedre designer. Jeg håber, at du vil tage et kig på min portfolio og se nogle af de projekter, 
+                    jeg har arbejdet på.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Graphic Design</span><br>Visuelt Content Skabelse</li>
+                            <li><span>Video Editing</span><br>Redigering af video</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2024</span><br>Multimediedesigner på UCL (igangværende)</li>
+                            <li><span>2017-2020</span><br>STX</li>
+                            <li><span>2006-2016</span><br>Folkeskole </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- --------------------services------------- -->
+<div id="services">
+<div class="container">
+<h1 class="sub-title">My Services</h1>
+
+    <div class="services-list">
+        <div>
+        <i class="fa-sharp fa-solid fa-laptop-code"></i>
+        <h2>Web Desgin</h2>
+        <p>Webdesign er processen med at oprette og organisere indhold, layout og funktionalitet på en hjemmeside. Det involverer en kombination af grafisk design, brugeroplevelses (UX) design og brugergrænseflade (UI) design samt HTML, CSS og andre programmeringssprog.</p>
+        <a href="#">Learn more</a>
+        </div> 
+        
+            <div>
+                <i class="fa-solid fa-table-columns"></i>
+            <h2>UI/UX</h2>
+            <p>Brugeroplevelse (UX) og brugergrænseflade (UI) design er to fagområder, der fokuserer på at oprette digitale produkter, der er lette og givende at bruge.</p>
+            <a href="#">Learn more</a>
+            </div> 
+        
+                <div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                <h2>Graphic Design</h2>
+                <p>Grafisk design er et område, der involverer at oprette visuelt indhold til forskellige medier, såsom tryk, hjemmesider og sociale medier. Det kombinerer elementer som typografi, farveteori, komposition og layout for at skabe effektiv visuel kommunikation.</p>
+                <a href="#">Learn more</a>
+                </div>
+    
+</div>
+</div>
+</div>
+
+<!-- --------------portfolio------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Selvportræt</h3>
+                    <p>Selvportræt kreeret i Adobe Illustrator med henblik på at dygtigere mig selv i programmet</p>
+                    
+                </div>
+            </div><div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Plakat</h3>
+                    <p>Plakat udarbejdet i Photoshop, med henblik på at printe ud og understøtte en udstilling</p>
+                    
+                </div>
+            </div><div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Optimering af hjemmeside</h3>
+                    <p>Forbedring af hjemmesides visuelle udtryk og brugervenlighed</p>
+                    
+                </div>
+            </div>
+        </div>
+        <a href="1.html" class="btn">See more</a>
+    </div>
+</div>
+<!-- -------------------------contact information---------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> edvinz@live.dk</p>
+                <p><i class="fa-solid fa-phone-volume"></i> +45 60533507</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/edvin.zuko"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Zuko </p>
+    </div>
+</div>
+
+
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");   
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+</script>
+
+<script>
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbws4nsXvq2w5k4cIFbwZUyHZphH5C42Jc9SB5VM39-6Ejv80TEzFSUvW6zlt5Na1koJcw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Your message has been sent succesfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
